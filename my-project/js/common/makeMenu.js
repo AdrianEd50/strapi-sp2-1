@@ -1,6 +1,19 @@
+import { retriveUsername } from "../utils/storage.js";
+
 export default function makeMenu() {
   const { pathname } = document.location;
-  console.log(pathname);
+
+  const username = retriveUsername();
+
+  console.log(username);
+
+  let authLink = `<a href="login.html" class="${
+    pathname === "/my-project/login.html" ? "active" : ""
+  }">Login</a>`;
+
+  if (username) {
+    authLink = `<span class="login-span">Hey ${username}</span>`;
+  }
 
   const conteiner = document.querySelector(".menu-conteiner");
 
@@ -17,11 +30,7 @@ export default function makeMenu() {
                                   : ""
                               }">Products</a>
 
-                              <a href="login.html" class="${
-                                pathname === "/my-project/login.html"
-                                  ? "active"
-                                  : ""
-                              }">Login</a>
+                              ${authLink}
                               
                               <a href="checkout.html" class="${
                                 pathname === "/my-project/checkout.html"
