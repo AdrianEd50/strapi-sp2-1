@@ -1,9 +1,12 @@
 import { baseUrl } from "./constants/api.js";
+import makeMenu from "./common/makeMenu.js";
 
 const productsUrl = baseUrl + "products";
 const productsConteiner = document.querySelector(
   ".featured-products-conteiner"
 );
+
+makeMenu();
 
 (async function () {
   try {

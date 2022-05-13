@@ -12,7 +12,15 @@ body {
     .logo { 
         width: 90px;
     }
-    
+
+    a { 
+        color: white;
+        padding: 5px;
+    } 
+
+    a:hover { 
+        color: white;
+    }
     
     .jumbotron img { 
         width: 100%;
@@ -121,6 +129,31 @@ body {
         background-color: rgb(247, 185, 62);
     
     }
+
+    .message { 
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid grey;
+        color: grey;
+    } 
+
+    .message.warning {
+        border-color: orange;
+        color: white;
+        background: orange;
+    }
+
+    .message.success { 
+        border-color: green;
+        color: white;
+        background: green;
+    }
+
+    .menu a.active {
+        color: red;
+    }
+    
+
     
     
     
