@@ -157,6 +157,12 @@ body {
         color: white;
     }
 
+    .login-button { 
+        background: #343a40;
+        color: white;
+        border: #343a40;
+    }
+
     
     
     

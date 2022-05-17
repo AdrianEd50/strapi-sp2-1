@@ -12,7 +12,7 @@ export default function makeMenu() {
   }">Login</a>`;
 
   if (username) {
-    authLink = `<span class="login-span">Hey ${username}</span>`;
+    authLink = `<button class="login-button"> Logout</button>`;
   }
 
   const conteiner = document.querySelector(".menu-conteiner");
