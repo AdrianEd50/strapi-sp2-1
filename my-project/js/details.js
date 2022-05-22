@@ -10,7 +10,7 @@ console.log(id);
 
 const url = "http://localhost:1337/products/" + id;
 
-async function fetchProduct() {
+export async function fetchProduct() {
   try {
     const response = await fetch(url);
     const json = await response.json();
@@ -32,6 +32,6 @@ function createHTML(json) {
                          <h1>${json.title}</h1>
                          <p>${json.price}</p>
                          <p>${json.description}</p>
-                         <a href="checkout.html" class="cart cta-cart">Add to cart</a>
+                         <a class="cta cta-cart">Add to cart</a>
                          </div>`;
 }

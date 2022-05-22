@@ -12,7 +12,11 @@ export default function makeMenu() {
   }">Login</a>`;
 
   if (username) {
-    authLink = `<button class="login-button"> Logout</button>`;
+    authLink = `<a href="add.html" class="${
+      pathname === "/my-project/add.html" ? "active" : ""
+    }">Add Product</a>
+    
+    <button class="login-button"> Logout</button>`;
   }
 
   const conteiner = document.querySelector(".menu-conteiner");
@@ -31,6 +35,8 @@ export default function makeMenu() {
                               }">Products</a>
 
                               ${authLink}
+
+                              
                               
                               <a href="checkout.html" class="${
                                 pathname === "/my-project/checkout.html"

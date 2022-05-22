@@ -22,12 +22,6 @@ body {
         color: white;
     }
     
-    .jumbotron img { 
-        width: 100%;
-        margin: 0;
-        
-    }
-    
     .conteiner { 
         max-width: 1000px;
         margin: 0 auto;
@@ -36,6 +30,12 @@ body {
     .conteiner h1 { 
         text-align: center;
         font-size: 3rem;
+    }
+    /*home*/
+    .jumbotron img { 
+        width: 100%;
+        margin: 0;
+        
     }
     
     .featured-product img { 
@@ -46,22 +46,19 @@ body {
     }
     
     .featured-products-conteiner { 
-        display: flex;
-        
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .featured-product h2,p { 
+        margin-left: 20px;
+    }
+
+    .featured-product a { 
+        margin-left: 5px;
     }
     
-    .cta-home {
-        border-radius: 10px;
-        background-color: orange;
-        padding: 5px 15px 5px 15px ;
-        color: black;
-    }
-    
-    .cta-home:hover { 
-        color: black;
-        background-color: rgb(247, 185, 62);
-    }
-    
+    /*footer*/
     footer { 
         background-color: #343a40;
         color: #fff;
@@ -73,10 +70,10 @@ body {
     .wrapper { 
         flex: 1 0 auto;
     }
-    
+    /*products*/
     .products-conteiner { 
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: 1fr;
     }
     
     .product img{ 
@@ -95,7 +92,6 @@ body {
     }
     
     .products-details { 
-        display: flex;
         max-width: 1000px;
         margin: 120px auto;
         padding: 20px;
@@ -105,9 +101,7 @@ body {
         flex: 1;
     }
     
-    .product-details__details {
-    margin-left: 100px;
-    }
+    
     
     .product-details__details p { 
         font-family: 'Montserrat', sans-serif;
@@ -115,8 +109,25 @@ body {
     
     .product-details__details h1 { 
         font-family: 'DM Serif Display', serif;
+        margin-top: 10px;
+    }
+
+    /*menu*/
+    .menu a.active {
+        color: red;
+    }
+    /*cta & messages*/
+    .cta-home {
+        border-radius: 10px;
+        background-color: orange;
+        padding: 5px 15px 5px 15px ;
+        color: black;
     }
     
+    .cta-home:hover { 
+        color: black;
+        background-color: rgb(247, 185, 62);
+    }
     .cta-cart { 
         border-radius: 10px;
         background-color: orange;
@@ -143,16 +154,20 @@ body {
         background: orange;
     }
 
+    .message.error {
+        border-color: red;
+        color: white;
+        background: red;
+    }
+
     .message.success { 
         border-color: green;
         color: white;
         background: green;
     }
 
-    .menu a.active {
-        color: red;
-    }
     
+    /*Login*/
     .login-span { 
         color: white;
     }
@@ -163,6 +178,111 @@ body {
         border: #343a40;
     }
 
+    .login-button:hover { 
+        text-decoration: underline;
+    }
+
+    label { 
+        display: block;
+    }
+
+    form{ 
+        max-width: 275px;
+        margin: 0 auto;
+    }
+
+    form input { 
+        width: 100%;
+    }
+
+    button { 
+        margin-top: 0.6rem;
+        border-radius: 5px;
+    }
+
+    .login-btn { 
+        background: green;
+        border: green;
+        color: white;
+        max-width: 400px;
+        width: 100%;
+    }
+
+
+    /*edit page*/
+    #description { 
+        max-width: 400px;
+        width: 100%;
+        height: 180px; 
+    }
+
+    .edit { 
+        display: none;
+    }
+
+    .edit-btn { 
+        background: green;
+        color: white;
+        border: green;
+        padding: 0.2rem;
+        max-width: 400px;
+        width: 100%; 
+    }
+
+    .delete { 
+        background: red;
+        color: white;
+        border: red;
+        padding: 0.2rem;
+        max-width: 400px;
+        width: 100%;
+    }
+
+    /*Add product page*/
+    .add-btn { 
+        max-width: 400px;
+        width: 100%;
+        background: green;
+        border: green;
+        color: white;
+        padding: 0.2rem;
+    }
+
+
+    /*Media*/
+    
+    @media (min-width: 500px) {  
+        .products-conteiner { 
+            grid-template-columns: repeat(2, 1fr);
+        } 
+        .products-details { 
+            display: flex;
+        }
+        .product-details__details {
+            margin-left: 50px;
+            }
+
+            form{ 
+                max-width: 400px;
+                margin: 0 auto;
+            }
+    }
+    @media (min-width: 700px) { 
+        .featured-products-conteiner { 
+            display: flex;
+        } 
+        .products-conteiner { 
+            grid-template-columns: repeat(3, 1fr);
+        } 
+         
+    }
+    
+    @media (min-width: 900px) { 
+        .products-conteiner { 
+            grid-template-columns: repeat(4, 1fr);
+        } 
+    }
+   
     
     
     

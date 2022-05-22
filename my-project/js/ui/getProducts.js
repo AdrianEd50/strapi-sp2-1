@@ -1,4 +1,4 @@
-//import { retriveCartFav } from "./utils/favouriteCartFunction.js";
+import { retriveUsername } from "../utils/storage.js";
 
 export function getProducts(productsToGet) {
   const conteiner = document.querySelector(".products-conteiner");
@@ -6,12 +6,21 @@ export function getProducts(productsToGet) {
   conteiner.innerHTML = "";
 
   productsToGet.forEach(function (product) {
-    let productLink = `<a href="details.html?id=${product.id}" class="cta-home">View</a>`;
+    const username = retriveUsername();
+
+    let link = `<a href="details.html?id=${product.id}" class="cta-home">View</a>`;
+
+    if (username) {
+      link = `<a href="edit.html?id=${product.id}" class="cta-home">View</a>`;
+    } else {
+      link = `<a href="details.html?id=${product.id}" class="cta-home">View</a>`;
+    }
+
     conteiner.innerHTML += `<div class="product">  
                                 <img src="http://localhost:1337${product.image.url}" alt="${product.title}" class="product-details-image" />                                                
                                   <h4>${product.title}<h4>
                                   <p>$${product.price}<p>
-                                  <div class="home-link">${productLink}</div>
+                                  <div class="home-link">${link}</div>
                                </div>`;
   });
 }

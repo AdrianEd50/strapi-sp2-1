@@ -28,14 +28,42 @@
           </nav>
     </header>
     <div class="wrapper">
-    <div class="jumbotron">
-        <img src="images/large_jakob_owens_Jz_J_Syb_P_Fb3s_unsplash_0840f6de0c.jpg" alt="A shoe being thrown into the air">
-      </div>
+    
 
       <div class="conteiner">
         
-          <h1>Featured Products</h1>
-          <div class="featured-products-conteiner"></div>
+          <h1>Add product</h1>
+    <form>
+          <div class="message-conteiner"></div>
+
+          <div>
+              <label for="title">Title</label>
+              <input id="title"/>
+          </div>
+
+          <div>
+            <label for="price">Price</label>
+            <input id="price"/>
+        </div>
+
+        <div>
+            <label for="featured">Featured</label>
+            <input id="featured"/>
+        </div>
+
+        <div>
+            <label for="description">Description</label>
+            <textarea id="description"></textarea>
+        </div>
+
+        <div>
+            <label for="image"> image</label>
+            <input type="text" id="image">
+        </div>
+
+        <button class="add-btn">Add</button>
+
+    </form>
         
       </div>
       </div>
@@ -47,5 +75,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/43233ce486.js" crossorigin="anonymous"></script>
 <script src="js/script.js" type="module"></script>
+<script src="js/add.js" type="module"></script>
+
+
 </body>
 </html>
